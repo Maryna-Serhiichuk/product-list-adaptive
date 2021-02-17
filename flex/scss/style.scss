@@ -1,0 +1,248 @@
+* {padding: 0;margin: 0;border: 0;}
+*, *:before, *:after {box-sizing: border-box;}
+:focus, :active {outline: none;}
+a:focus, a:active {outline: none;}
+nav, footer, header, aside {display: block;}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;}
+input, button, textarea {font-family: inherist;}
+input:-ms-clear {display: none;}
+button {cursor: pointer;}
+button::-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li {list-style: none;}
+img {vertical-align: top;}
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;}
+
+$red:rgb(255,102,102);
+$orange:rgb(255,147,29);
+$yellow:rgb(255,190,23);
+
+body{
+  font-family: "Roboto Condensed";
+  font-size: 15px;
+  color: #878787;
+}
+.body{
+  display: flex;
+  justify-content: center;
+}
+.wrap-page{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.block{
+  width: 416px;
+  max-height: 479px;
+}
+.wrap__container{
+  display: flex;
+  flex-direction: column;
+  margin: 24px 15px;
+}
+.min{
+  max-width: 386px;
+  max-height: 211px;
+}
+.max{
+  max-width: 386px;
+  height: 446px;
+  & .content-goods{
+      display: flex;
+      flex-direction: column;
+    }
+    & .description{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    & .image{
+      position: static;
+      margin-bottom: 34px;
+      img{
+        position: static;
+        max-height: 250px;
+        max-width: 100%;
+      }
+    }
+    & .text__goods{
+      margin: 0px 0px 17px 0px;
+    }
+    & .price-goods{
+      border-bottom: 1px dashed #878787;
+      padding: 0px 0px 6px 0px;
+      margin: 0px 0px 12px 0px;
+    }
+}
+.red{border: 1px solid $red;}
+.orange{border: 1px solid $orange;}
+.yellow{border: 1px solid $yellow;}
+.red-bg{background: $red;}
+.orange-bg{background: $orange;}
+.yellow-bg{background: $yellow;}
+.red-price{color: $red;}
+.orange-price{color: $orange;}
+.yellow-price{color: $yellow;}
+.content-goods{margin: 18px;}
+.images{
+  position: relative;
+  img{
+    position: absolute;
+    top: -18px;
+    right: 0;
+    max-width: 180px;
+  }
+}
+.images-goods{
+  display: flex;
+}
+.discount{
+  border-radius: 50%;
+  height: 58px;
+  width: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  line-height: 17px;
+  margin: -10px 0px 10px -10px;
+}
+.text__goods{
+  max-width: 175px;
+}
+.text{
+  line-height: 18px;
+}
+.price-goods{
+  margin: 17px 0px 12px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.price{
+  font-size: 21px;
+  font-family: Dosis;
+  span{
+    font-family: Arial;
+    font-size: 12px;
+    color: #878787 !important;
+    margin: 0px 0px 0px 12px;
+    position: relative;
+    &:before{
+      content: "";
+      border-bottom: 2px solid #878787;
+      position: absolute;
+      transform: rotate(18deg);
+      width: 100%;
+      margin-top: 12px;
+    }
+  }
+}
+.shop{
+  font-family: Arial;
+  font-size: 13px;
+  margin: 6px 0px 0px 0px;
+}
+.info__goods{
+  border-top: 1px dashed #878787;
+}
+.block__info{
+  display: flex;
+  justify-content: space-around;
+  margin: 9px 0px 0px 0px;
+  padding: 0px 10px;
+}
+.line{border-right: 1px solid #878787;}
+
+@media(max-width: 1200px){
+  .block{
+      width: 350px;
+  }
+  .text__goods{
+    max-width: 145px;
+  }
+  .text{
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 992px){
+  .wrap-page{
+    flex-wrap: wrap;
+  }
+  .block{
+    width: 416px;
+  }
+  .block:last-child{
+    display: flex;
+    width: 100%;
+    .min{
+      width: 832px;
+    }
+    .wrap__container{
+      margin: 15px 15px;
+    }
+  }
+}
+
+@media(max-width: 768px){
+  .wrap-page{
+    display: block;
+  }
+  img{
+    top: -5px;
+    width: 100px;
+  }
+  .block:last-child{
+    display: block;
+    .min{
+      width: auto;
+    }
+  }
+  .block{
+    width: 320px;
+  }
+  .wrap__container{
+    margin: 15px 15px;
+  }
+  .text__goods{
+    max-width: 145px;
+  }
+  .text{
+    font-size: 14px;
+  }
+  .max{
+    max-height: 211px;
+    & .content-goods{
+        display: block;
+      }
+    & .description{
+        display: block;
+      }
+    & .images{
+      position: relative;
+      img{
+        position: absolute;
+        top: -9px;
+        right: 0;
+        max-width: 120px;
+      }
+    }
+    & .price-goods{
+      border-bottom: none;
+      padding: 0px 0px 0px 0px;
+      margin: 0px 0px 12px 0px;
+    }
+  }
+}
